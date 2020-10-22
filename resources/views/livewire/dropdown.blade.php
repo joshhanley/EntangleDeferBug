@@ -4,11 +4,13 @@
 >
     <div class="flex space-x-4">
 
-        <div class="relative">
+        <div
+            class="relative"
+            x-on:click.away="alpineShow = false; $wire.someMethod()"
+        >
             <div class="font-bold">Input</div>
             <input
                 x-on:focus="alpineShow = true"
-                x-on:click.away="alpineShow = false; $wire.someMethod()"
                 class=" w-64 p-4 border border-gray-500 rounded bg-white"
                 placeholder="Click here"
             />
